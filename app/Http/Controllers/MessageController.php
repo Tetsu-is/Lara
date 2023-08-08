@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use Aop\Models\Message;
+use App\Models\Message;
 
 class MessageController extends Controller
 {
@@ -12,6 +12,6 @@ class MessageController extends Controller
     {
         $messages = Message::all();
 
-        return view('messages/index', ['message' => $messages]);
+        return view('message/index', ['messages' => $messages]);
     }
 }
